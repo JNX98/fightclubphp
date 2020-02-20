@@ -1,23 +1,24 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="">
-<!--Tähän css:n linkki kun se on olemassa-->
+<link rel="stylesheet" type="text/css" href=""><!--Tähän css:n linkki kun se on olemassa-->
 <title>Fightclub Guesbook</title>
 </head>
 <body>
 <header>
 <h2>Tervetuloa vieraskirjaan!</h2>
-<button action="guestbook.html" type="submit">kirjoita uusi viesti</button>
-<button action="muokkaa.php" type="submit">Muokkaa edellisiä viestejäsi</button>
-<!--tähän muokkaussivun linkki kun valmis-->
-<button action="admin-kirjaudu.php" type="submit">Ylläpidon kirjautuminen</button>
-<!--Tähän kirjautumissivun linkki kun valmis-->
+<br>
+<nav>
+<a href="guestbook.html">Uusi viesti</a>
+<a href="#">Muokkaa viestejäsi</a><!--Tähän muokkaussivun linkki kun se on käytettävissä-->
+<a id="admin" href="#">Ylläpitoon kirjautuminen</a><!--Tähän kirjautumisen linkki kun se on käytettävissä, tein tälle oman id:n jotta tästä voi tehdä eri näköisen CSS:llä-->
+</nav>
 </header>
 <br>
 <article>
 <p>*tähän ehkä taulukko yms. ja PHP:tä jolla aivu tulostaa viestit*</p>
 </article>
-<footer><h4>© fight club 2020</h4></footer>
+<br>
+<footer><h4>© fightclub 2020</h4></footer>
 </body>
 </html>
