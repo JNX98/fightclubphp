@@ -19,12 +19,14 @@
 <br>
 <article>
 <?php
+// Create connection
 $conn=mysqli_connect("127.0.1", "trtkp19a3", "trtkp19a3");
+// Check connection
 if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
 }
 $ok=mysqli_select_db($conn, "trtkp19a3"); 
-$tulos=mysqli_query($conn, "SELECT *, from_unixtime(timestamp, '%D %M %Y %h:%i') FROM fightclub_guestbook");
+$tulos=mysqli_query($conn, "SELECT * FROM fightclub_guestbook");
 ?>
 <table>
     <tr>
@@ -32,9 +34,11 @@ $tulos=mysqli_query($conn, "SELECT *, from_unixtime(timestamp, '%D %M %Y %h:%i')
         <th>Viesti</th>
         <th>Nimimerkki</th>
     </tr>
-<?php while ($rivi=mysqli_fetch_object($tulos)){ ?>
+<?php while ($rivi=mysqli_fetch_object($tulos)){ 
+$date=date_create($rivi->timestamp);
+?>
 <tr>
-<td><?php echo $rivi->timestamp; ?> </td>
+<td><?php echo date_format($date, "d.m.Y H:i"); ?> </td>
 <td><?php echo $rivi->message; ?> </td>
 <td><?php echo $rivi->name; ?> </td>
 </tr>
