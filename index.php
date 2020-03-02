@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href=""><!--Tähän css:n linkki kun se on olemassa-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href=""><!--TÃ¤hÃ¤n css:n linkki kun se on olemassa-->
 <title>Fightclub Guesbook</title>
 </head>
 <body>
@@ -11,21 +12,19 @@
 <br>
 <nav>
 <a href="guestbook.php">Uusi viesti</a>
-<a href="#">Muokkaa viestejäsi</a><!--Tähän muokkaussivun linkki kun se on käytettävissä-->
-<a id="admin" href="#">Ylläpitoon kirjautuminen</a><!--Tähän kirjautumisen linkki kun se on käytettävissä, tein tälle oman id:n jotta tästä voi tehdä eri näköisen CSS:llä-->
+<a href="#">Muokkaa viestejÃ¤si</a><!--TÃ¤hÃ¤n muokkaussivun linkki kun se on kÃ¤ytettÃ¤vissÃ¤-->
+<a id="admin" href="#">YllÃ¤pitoon kirjautuminen</a><!--TÃ¤hÃ¤n kirjautumisen linkki kun se on kÃ¤ytettÃ¤vissÃ¤, tein tÃ¤lle oman id:n jotta tÃ¤stÃ¤ voi tehdÃ¤ eri nÃ¤kÃ¶isen CSS:llÃ¤-->
 </nav>
 </header>
 <br>
 <article>
 <?php
-// Create connection
 $conn=mysqli_connect("127.0.1", "trtkp19a3", "trtkp19a3");
-// Check connection
 if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
 }
 $ok=mysqli_select_db($conn, "trtkp19a3"); 
-$tulos=mysqli_query($conn, "SELECT * FROM fightclub_guestbook");
+$tulos=mysqli_query($conn, "SELECT *, from_unixtime(timestamp, '%D %M %Y %h:%i') FROM fightclub_guestbook");
 ?>
 <table>
     <tr>
@@ -43,6 +42,6 @@ $tulos=mysqli_query($conn, "SELECT * FROM fightclub_guestbook");
 </table>
 </article>
 <br>
-<footer><h4>© fightclub 2020</h4></footer>
+<footer><h4>Â© fightclub 2020</h4></footer>
 </body>
 </html>
