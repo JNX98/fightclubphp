@@ -19,12 +19,8 @@ if($op=="loggedin"){
     $_SESSION['uname']=$qry['admin_name'];
     $_SESSION['level']=$qry['level'];
 	if($qry['level']=="admin"){
-		header("location:admin_home.php");
-	}
-	/*else {
-		header("location:adminlogin.php");
-	}
-	*/
+	  header("location:admin_home.php");
+	  }
   }
 else{
         ?>
@@ -40,7 +36,7 @@ else{
 else if($op=="out"){
   unset($_SESSION['uname']);
   unset($_SESSION['level']);
-  header("location:vieraskirja.html");
+  header("location:index.php");
 }
 
 ?>
