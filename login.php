@@ -11,8 +11,8 @@ $ok=mysqli_select_db($yhteys, "trtkp19a3");
 
 
 if($op=="loggedin"){
-  $sql = mysqli_query($yhteys, "SELECT * FROM jenny19101_admin WHERE admin_name='$uname' AND admin_pw=md5('$password')");
-//yll‰pitotunnukset oltava omassa tkannassaan, muuten ne voidaan poistaa admin_home-sivulla
+  $sql = mysqli_query($yhteys, "SELECT * FROM fightclub_admin WHERE admin_name='$uname' AND admin_pw=md5('$password')");
+//yll√§pitotunnukset oltava omassa tkannassaan, muuten ne voidaan poistaa admin_home-sivulla
 
   if(mysqli_num_rows($sql)==1){
     $qry=mysqli_fetch_array($sql);
