@@ -13,7 +13,7 @@
 <nav>
 <a href="guestbook.php">Uusi viesti</a>
 <a href="#">Muokkaa viestejÃ¤si</a><!--TÃ¤hÃ¤n muokkaussivun linkki kun se on kÃ¤ytettÃ¤vissÃ¤-->
-<a id="admin" href="#">YllÃ¤pitoon kirjautuminen</a><!--TÃ¤hÃ¤n kirjautumisen linkki kun se on kÃ¤ytettÃ¤vissÃ¤, tein tÃ¤lle oman id:n jotta tÃ¤stÃ¤ voi tehdÃ¤ eri nÃ¤kÃ¶isen CSS:llÃ¤-->
+<a id="admin" href="login.php">YllÃ¤pitoon kirjautuminen</a><!--TÃ¤hÃ¤n kirjautumisen linkki kun se on kÃ¤ytettÃ¤vissÃ¤, tein tÃ¤lle oman id:n jotta tÃ¤stÃ¤ voi tehdÃ¤ eri nÃ¤kÃ¶isen CSS:llÃ¤-->
 </nav>
 </header>
 <br>
