@@ -24,7 +24,7 @@ document.getElementById("note").innerHTML = txt;
 <h2>Welcome Admin!</h2>
 
 <a href="adminlogout.php">Logout</a>
-<p id="note"></p>
+<p id="note"></p> <!--tämä ei nyt jostakin syystä toimi-->
 
 <?php
 
@@ -36,13 +36,13 @@ $yhteys=mysqli_connect("127.0.0.1", "trtkp19a3", "trtkp19a3");
 $ok=mysqli_select_db($yhteys, "trtkp19a3");
 
 if (isset($delete)){
-	$sql="delete from jenny19101_vieraskirja where id=?";
+	$sql="delete from jenny19101_vieraskirja where id=?"; //muutettava!!
 	$stmt=mysqli_prepare($yhteys, $sql);
 	mysqli_stmt_bind_param($stmt, 'i', $delete);
 	mysqli_stmt_execute($stmt);
 }
 
-$tulos=mysqli_query($yhteys, "select * from jenny19101_vieraskirja");
+$tulos=mysqli_query($yhteys, "select * from jenny19101_vieraskirja"); //muutettava!!
 
 echo "<table border='1'>
 <tr>
@@ -52,10 +52,10 @@ echo "<table border='1'>
 <th>Email</th>
 <th>Action</th>
 </tr>";
-
+//alla olevat muutettava!!
 while($rivi=mysqli_fetch_object($tulos)){
 	echo "<tr>";
-	echo "<td>$rivi->id</td> 
+	echo "<td>$rivi->id</td>
 		<td>$rivi->kayttajanimi</td> 
 		<td>$rivi->kommentti</td> 
 		<td>$rivi->email</td>";
