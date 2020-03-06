@@ -10,32 +10,36 @@ $yhteys=mysqli_connect("127.0.0.1", "trtkp19a3", "trtkp19a3");
 $ok=mysqli_select_db($yhteys, "trtkp19a3");
 
 
-
 if($op=="loggedin"){
-  $sql = mysqli_query($yhteys, "SELECT * FROM jenny19101_vieraskirja WHERE kayttajanimi='$uname' AND salasana=md5('$password')");
-/*
-  while($rivi=mysqli_fetch_array($sql)){
-	print "x".$rivi['kayttajanimi']."x".$rivi['salasana'];
-  }
-*/
-
+  $sql = mysqli_query($yhteys, "SELECT * FROM jenny19101_admin WHERE admin_name='$uname' AND admin_pw=md5('$password')");
+//ylläpitotunnukset oltava omassa tkannassaan, muuten ne voidaan poistaa admin_home-sivulla
 
   if(mysqli_num_rows($sql)==1){
     $qry=mysqli_fetch_array($sql);
-    $_SESSION['uname']=$qry['kayttajanimi'];
-	if($qry['kayttajanimi']=="admin"){
+    $_SESSION['uname']=$qry['admin_name'];
+    $_SESSION['level']=$qry['level'];
+	if($qry['level']=="admin"){
 		header("location:admin_home.php");
 	}
-	else {
+	/*else {
 		header("location:adminlogin.php");
 	}
-
+	*/
   }
+else{
+        ?>
+        <script language="JavaScript">
+            alert('Username or password incorrect.');
+            document.location='adminlogin.php';
+        </script>
+        <?php
+    }
 
 }
 
 else if($op=="out"){
   unset($_SESSION['uname']);
+  unset($_SESSION['level']);
   header("location:vieraskirja.html");
 }
 
