@@ -23,8 +23,8 @@ document.getElementById("note").innerHTML = txt;
 <body>
 <h2>Welcome Admin!</h2>
 
-<a href="adminlogout.php">Logout</a>
-<p id="note"></p> <!--tämä ei nyt jostakin syystä toimi-->
+<a href="adminlogout.php">Logout</a> | <a href="admin_add.html">Add another admin</a> | <a href="show_admins.php">Show all admins</a>
+<!--<p id="note"></p>-->
 
 <?php
 
@@ -36,13 +36,13 @@ $yhteys=mysqli_connect("127.0.0.1", "trtkp19a3", "trtkp19a3");
 $ok=mysqli_select_db($yhteys, "trtkp19a3");
 
 if (isset($delete)){
-	$sql="delete from jenny19101_vieraskirja where id=?"; //muutettava!!
+	$sql="delete from jenny19101_vieraskirja where id=?";
 	$stmt=mysqli_prepare($yhteys, $sql);
 	mysqli_stmt_bind_param($stmt, 'i', $delete);
 	mysqli_stmt_execute($stmt);
 }
 
-$tulos=mysqli_query($yhteys, "select * from jenny19101_vieraskirja"); //muutettava!!
+$tulos=mysqli_query($yhteys, "select * from jenny19101_vieraskirja");
 
 echo "<table border='1'>
 <tr>
@@ -50,12 +50,12 @@ echo "<table border='1'>
 <th>Username</th>
 <th>Comment</th>
 <th>Email</th>
-<th>Action</th>
+<th colspan='2'>Action</th>
 </tr>";
-//alla olevat muutettava!!
+
 while($rivi=mysqli_fetch_object($tulos)){
 	echo "<tr>";
-	echo "<td>$rivi->id</td>
+	echo "<td>$rivi->id</td> 
 		<td>$rivi->kayttajanimi</td> 
 		<td>$rivi->kommentti</td> 
 		<td>$rivi->email</td>";
