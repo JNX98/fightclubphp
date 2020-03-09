@@ -4,7 +4,7 @@
 <title>Edit a comment</title>
 </head>
 <body>
-<!-- Ylläpidon käyttäjien muokkaus -->
+<!-- YllÃ¤pidon kÃ¤yttÃ¤jien muokkaus -->
 <?php
 if (isset($_GET["edit"])){
 	$edit=$_GET["edit"];

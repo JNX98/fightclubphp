@@ -11,6 +11,6 @@ User name: <input type='text' name='uname' value=''><br>
 Password: <input type='password' name='password' value=''><br>
 <input type='submit' value='Login'>
 </form>
-<a href="./vieraskirja.php"><button>Return</button></a> <!--tulee pitää formin ulkopuolella / korjattava: linkin johdettava etusivulle -->
+<a href="./vieraskirja.php"><button>Return</button></a> <!--tulee pitÃ¤Ã¤ formin ulkopuolella / korjattava: linkin johdettava etusivulle -->
 </body>
 </html>

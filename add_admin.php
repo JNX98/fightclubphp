@@ -1,6 +1,6 @@
 <?php
 
-//Uusien ylläpitäjien lisäys
+//Uusien yllÃ¤pitÃ¤jien lisÃ¤ys
 
 $admin_name=$_POST["name"];
 $admin_email=$_POST["email"];

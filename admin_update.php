@@ -1,6 +1,6 @@
 <?php
 
-				//Käyttäjien päivitys
+				//KÃ¤yttÃ¤jien pÃ¤ivitys
 
 $kommentti=$_POST["comment"];
 $id=$_POST["id"];
