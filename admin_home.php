@@ -59,8 +59,8 @@ while($rivi=mysqli_fetch_object($tulos)){
 		<td>$rivi->name</td> 
 		<td>$rivi->message</td> 
 		<td>$rivi->email</td>";
-	echo "<td><a href='admin_home.php?delete=$rivi->id' onclick='return deleteFunction()'>Poista</a></td>";
-	echo "<td><a href='adminedit.php?edit=$rivi->id'>Muokkaa</a></td><br>";
+	echo "<td><a href='admin_home.php?delete=$rivi->id' onclick='return deleteFunction()'>Delete</a></td>";
+	echo "<td><a href='adminedit.php?edit=$rivi->id'>Edit</a></td><br>";
 	echo "</tr>";
 	}
 

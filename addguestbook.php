@@ -8,15 +8,13 @@
 
 <?php
 
-$name=$_POST["nimi"]; // lomakkeelta tulevat muuttujat muutettava
+$name=$_POST["name"];
 $email=$_POST["email"];
 $message=$_POST["comment"];
-//$salasana=$_POST["salasana"];
 
 $yhteys=mysqli_connect("127.0.0.1", "trtkp19a3", "trtkp19a3");
 $ok=mysqli_select_db($yhteys, "trtkp19a3");
 
-//mikä tässä alla olevassa heittää?
 $sql="insert into fightclub_guestbook(name, email, message, timestamp) values(?, ?, ?, CURRENT_TIMESTAMP())";
 $stmt=mysqli_prepare($yhteys, $sql);
 mysqli_stmt_bind_param($stmt, 'sss', $name, $email, $message);
@@ -27,7 +25,7 @@ mysqli_close($yhteys);
 ?>
 
 <?php
-header("Location:vieraskirja.html"); // muutettava!!
+header("index.php");
 exit;
 ?>
 
