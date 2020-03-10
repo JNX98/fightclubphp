@@ -35,6 +35,6 @@
 </table>
 <table width="400" border="0" align="center" cellpadding="3" cellspacing="0">
 <tr>
-<td><strong><a href="index.php">View Guestbook</a> </strong></td>
+<td><strong><a href="viewguestbook.php">View Guestbook</a> </strong></td>
 </tr>
 </table>

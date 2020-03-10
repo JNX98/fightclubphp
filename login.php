@@ -12,6 +12,7 @@ $ok=mysqli_select_db($yhteys, "trtkp19a3");
 
 if($op=="loggedin"){
   $sql = mysqli_query($yhteys, "SELECT * FROM fightclub_admin WHERE admin_name='$uname' AND admin_pw=md5('$password')");
+//ylläpitotunnukset oltava omassa tkannassaan, muuten ne voidaan poistaa admin_home-sivulla
 
   if(mysqli_num_rows($sql)==1){
     $qry=mysqli_fetch_array($sql);
@@ -39,7 +40,7 @@ else{
 else if($op=="out"){
   unset($_SESSION['uname']);
   unset($_SESSION['level']);
-  header("location:index.php");
+  header("location:vieraskirja.html");
 }
 
 ?>
