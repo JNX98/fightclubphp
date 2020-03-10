@@ -1,6 +1,6 @@
 <?php
 
-			//Ylläpitäjien tietojen päivitys
+			//YllÃ¤pitÃ¤jien tietojen pÃ¤ivitys
 
 $id=$_POST["id"];
 $name=$_POST["name"];

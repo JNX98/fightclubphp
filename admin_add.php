@@ -1,11 +1,11 @@
 <?php
 session_start();
 if($_SESSION['level']!="admin"){
-	die("Sivu vaatii ylläpitovaltuudet.");
+	die("Sivu vaatii yllÃ¤pitovaltuudet.");
 }
 ?>
 <!DOCTYPE html>
-<html> <!-- Uusien ylläpitäjien lisäys-formi -->
+<html> <!-- Uusien yllÃ¤pitÃ¤jien lisÃ¤ysformi -->
 <head>
  <meta charset="UTF-8">
 <title>Add an Admin</title>

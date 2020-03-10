@@ -1,7 +1,7 @@
 <?php
 session_start();
 if($_SESSION['level']!="admin"){
-	die("Sivu vaatii ylläpitovaltuudet.");
+	die("Sivu vaatii yllï¿½pitovaltuudet.");
 }
 ?>
 
@@ -13,7 +13,7 @@ if($_SESSION['level']!="admin"){
 <body>
 <h2>Edit an admin</h2>
 
-		<!-- Ylläpitäjien tietojen päivitys -->
+		<!-- YllÃ¤pitÃ¤jien tietojen pÃ¤ivitys -->
 
 <?php
 if (isset($_GET["edit"])){

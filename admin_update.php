@@ -1,6 +1,6 @@
 <?php
 
-				//Käyttäjien päivitys
+			//KÃ¤yttÃ¤jien viestien pÃ¤ivitys
 
 $message=$_POST["comment"];
 $id=$_POST["id"];

@@ -1,11 +1,11 @@
 <?php
 session_start();
 if($_SESSION['level']!="admin"){
-	die("Sivu vaatii ylläpitovaltuudet.");
+	die("Sivu vaatii yllÃ¤pitovaltuudet.");
 }
 ?>
 
-<html> 					<!-- ylläpitäjien tulostus ja poistaminen -->
+<html> 					<!-- yllÃ¤pitÃ¤jien tulostus ja poistaminen -->
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 
