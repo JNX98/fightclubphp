@@ -35,7 +35,7 @@
         <a class="nav-link" href="#">Muokkaa viestejäsi</a><!--Tähän muokkaussivun linkki kun se on käytettävissä.-->
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="login.php">Ylläpitoon kirjautuminen</a>
+        <a class="nav-link" href="adminlogin.php">Ylläpitoon kirjautuminen</a>
       </li>
     </ul>
   </div>
