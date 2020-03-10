@@ -32,7 +32,7 @@
         <a class="nav-link" href="guestbook.php">Uusi viesti <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Muokkaa viestejäsi</a><!--Tähän muokkaussivun linkki kun se on käytettävissä.-->
+        <a class="nav-link" href="muokkaa.html">Muokkaa viestejäsi</a><!--Tähän muokkaussivun linkki kun se on käytettävissä.-->
       </li>
       <li class="nav-item">
         <a class="nav-link" href="adminlogin.php">Ylläpitoon kirjautuminen</a>
