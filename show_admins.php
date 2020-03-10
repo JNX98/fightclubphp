@@ -1,18 +1,21 @@
 <?php
 session_start();
 if($_SESSION['level']!="admin"){
-	die("Sivu vaatii yllï¿½pitovaltuudet.");
+	die("Sivu vaatii ylläpitovaltuudet.");
 }
 ?>
 
-<html> 					<!-- yllÃ¤pitÃ¤jien tulostus ja poistaminen -->
+<html> 					<!-- ylläpitäjien tulostus ja poistaminen -->
 <head>
+<link rel="stylesheet" type="text/css" href="style.css">
+
 <title>Admins</title>
 
 <script language="JavaScript" type="text/javascript">
 function deleteFunction(){
 	return confirm('Are you sure you wish to delete this admin?');
 }
+document.getElementById("note").innerHTML = txt;
 </script>
 
 </head>

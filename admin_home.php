@@ -23,7 +23,7 @@ document.getElementById("note").innerHTML = txt;
 <body>
 <h2>Welcome Admin!</h2>
 
-<a href="adminlogout.php">Logout</a> | <a href="admin_add.html">Add another admin</a> | <a href="show_admins.php">Show all admins</a>
+<a href="adminlogout.php">Logout</a> | <a href="admin_add.php">Add another admin</a> | <a href="show_admins.php">Show all admins</a>
 <!--<p id="note"></p>-->
 
 <?php
@@ -36,13 +36,13 @@ $yhteys=mysqli_connect("127.0.0.1", "trtkp19a3", "trtkp19a3");
 $ok=mysqli_select_db($yhteys, "trtkp19a3");
 
 if (isset($delete)){
-	$sql="delete from jenny19101_vieraskirja where id=?";
+	$sql="delete from fightclub_guestbook where id=?";
 	$stmt=mysqli_prepare($yhteys, $sql);
 	mysqli_stmt_bind_param($stmt, 'i', $delete);
 	mysqli_stmt_execute($stmt);
 }
 
-$tulos=mysqli_query($yhteys, "select * from jenny19101_vieraskirja");
+$tulos=mysqli_query($yhteys, "select * from fightclub_guestbook");
 
 echo "<table border='1'>
 <tr>
@@ -56,8 +56,8 @@ echo "<table border='1'>
 while($rivi=mysqli_fetch_object($tulos)){
 	echo "<tr>";
 	echo "<td>$rivi->id</td> 
-		<td>$rivi->kayttajanimi</td> 
-		<td>$rivi->kommentti</td> 
+		<td>$rivi->name</td> 
+		<td>$rivi->message</td> 
 		<td>$rivi->email</td>";
 	echo "<td><a href='admin_home.php?delete=$rivi->id' onclick='return deleteFunction()'>Poista</a></td>";
 	echo "<td><a href='adminedit.php?edit=$rivi->id'>Muokkaa</a></td><br>";

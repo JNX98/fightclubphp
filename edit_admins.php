@@ -1,7 +1,7 @@
 <?php
 session_start();
 if($_SESSION['level']!="admin"){
-	die("Sivu vaatii yllï¿½pitovaltuudet.");
+	die("Sivu vaatii ylläpitovaltuudet.");
 }
 ?>
 
@@ -13,7 +13,7 @@ if($_SESSION['level']!="admin"){
 <body>
 <h2>Edit an admin</h2>
 
-		<!-- YllÃ¤pitÃ¤jien tietojen pÃ¤ivitys -->
+		<!-- Ylläpitäjien tietojen päivitys -->
 
 <?php
 if (isset($_GET["edit"])){
@@ -33,9 +33,10 @@ if ($rivi=mysqli_fetch_object($tulos)) {
 ?>
 <form action='update_admins.php' method='post'>
 
+Id: <input type='text' name='id' value='<?php print $rivi->id;?>' readonly><br>
 Name: <input type='text' name='name' value='<?php print $rivi->admin_name;?>'><br>
 Email: <input type='text' name='email' value='<?php print $rivi->admin_email;?>'><br>
-New password: <input type='password' name='password' maxlength='12' value=''><br>
+New password: <input type='password' name='password' value=''><br>
 <input type='submit' name='ok' value='Update'><a href="show_admins.php"><button>Cancel</button></a>
 </form>
 

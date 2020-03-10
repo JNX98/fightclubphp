@@ -1,14 +1,16 @@
-/* tämä on väliaikainen tiedosto jonka voi heittää pois kun kunnon css on valmis*/
-
 body {
 	background-color: #ffffff;
 }
 
-th{
+table {
 	border: solid 1px #c92200;
 }
 
-table tr td{
+tr td{
+	border: solid 1px #c92200;
+}
+
+th{
 	border: solid 1px #c92200;
 }
 
